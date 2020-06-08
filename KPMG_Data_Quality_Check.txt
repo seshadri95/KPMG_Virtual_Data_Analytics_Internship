@@ -1,0 +1,31 @@
+Hi there,
+
+Greetings for the day and We have received your initial dataset provided and accessed data quality. I am breaking down some of the key issues as per the individual datasets.
+
+-> Customer demographics
+
+    - 'DOB' field has a potential outlier with value 1843-12-21. This can be mitigated by replacing the outliers with a maximum valid value.
+       Also, the Imputation strategy decided for 'DOB' was using from Job title and sector fields.
+    - 'Default' field has encoding issues and it would be great if you can revisit your data collection methods and check if that field is important or else can it's redundant.
+    - 'Gender' field has entries with values 'U', I assume it as unknown.
+    - 'Tenure' field is important for modeling and there are some missing values. No proper imputation strategy for this field can be found as its missing at completely at random.
+    - Imputation strategies for 'Job title' and 'Job Industry Category' uses Age, Purchases made, and Wealth data.
+    
+-> New Customer
+
+    - A total of 5 Unknown fields are found in the data and it would be helpful if you can provide the details of the respective columns. Out of which one field looks like 'Rank' duplicate.
+    - Imputation strategies for 'DOB', 'Job Type' & 'Job Industry Category' are the same as assumed earlier for customer demographics data.
+    
+-> Transactions
+
+    - 'Product first sold date'  field does not have date format.
+    - Nearly for 197 entries, there is no brand, product, and cost-related information. These contribute to nearly 6 out of 13 fields. So, imputation is a bit challenging and can lead to data bias.
+    - There are some missing values for 'Online Orders' and can you 
+    
+Upon joining old customers data, found that for few customers ids there are transactional entries but customer demographics and address details are missing.
+Respective customer ids are - 3, 10, 22, 23, 5034
+
+Kindly have a look and intimate us with any constraints you have regarding any of the issues enlisted above.
+
+Regards,
+Seshadri Sundarrajan
